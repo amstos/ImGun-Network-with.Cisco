@@ -8,7 +8,7 @@ IP 주소만으로는 네트워크 영역과 호스트 영역을 구분할 수 �
 
 ---
 
-## Subnet Mask란?
+# Subnet Mask란?
 
 - Network ID와 Host ID를 구분하는 기준
 - IPv4 주소와 함께 사용
@@ -25,7 +25,7 @@ Subnet Mask : 255.255.255.0
 
 ---
 
-## 서브넷 마스크 구조
+# 서브넷 마스크 구조
 
 ```text
 255.255.255.0
@@ -43,13 +43,15 @@ Network Bit : 24
 Host Bit    : 8
 ```
 
-를 의미한다.
+을 의미한다.
 
 ---
 
-## CIDR 표기법
+# CIDR 표기법
 
 CIDR(Classless Inter-Domain Routing)은 네트워크 비트 수를 간단하게 표현하는 방법이다.
+
+예시
 
 ```text
 192.168.10.100/24
@@ -63,7 +65,7 @@ CIDR(Classless Inter-Domain Routing)은 네트워크 비트 수를 간단하게 
 
 는 Network Bit가 24개임을 의미한다.
 
-### 자주 사용하는 CIDR
+## 자주 사용하는 CIDR
 
 | CIDR | Subnet Mask |
 | ------ | ------ |
@@ -77,7 +79,7 @@ CIDR(Classless Inter-Domain Routing)은 네트워크 비트 수를 간단하게 
 
 ---
 
-## 네트워크 주소 계산
+# 네트워크 주소 계산
 
 IP Address
 
@@ -108,16 +110,52 @@ Network Address : 192.168.10.0
 
 ---
 
-## 호스트 수 계산
+# Broadcast Address
 
-사용 가능한 호스트 수는 다음 공식으로 계산한다.
+Broadcast Address는 해당 네트워크에서 모든 Host에게 데이터를 전달하기 위한 주소이다.
+
+Host Bit를 모두 1로 설정한다.
+
+예시
+
+```text
+Network Address
+
+192.168.10.0/24
+```
+
+Host Bit
+
+```text
+00000000
+```
+
+Broadcast
+
+```text
+11111111
+```
+
+결과
+
+```text
+Broadcast Address : 192.168.10.255
+```
+
+---
+
+# 호스트 수 계산
+
+사용 가능한 Host 수는 다음 공식으로 계산한다.
 
 ```text
 2^(Host Bit 수) - 2
 ```
 
-- Network Address 1개 제외
-- Broadcast Address 1개 제외
+제외 항목
+
+- Network Address 1개
+- Broadcast Address 1개
 
 예시
 
@@ -131,17 +169,19 @@ Host Bit 계산
 32 - 24 = 8
 ```
 
-사용 가능한 호스트 수
+사용 가능한 Host 수
 
 ```text
 2^8 - 2
+
 = 256 - 2
+
 = 254
 ```
 
 ---
 
-## 서브넷별 호스트 수
+# 서브넷별 호스트 수
 
 | CIDR | Host Bit | 사용 가능한 Host |
 | ------ | ------ | ------ |
@@ -155,11 +195,234 @@ Host Bit 계산
 
 ---
 
-## 핵심 정리
+# VLSM (Variable Length Subnet Mask)
+
+## 개요
+
+VLSM(Variable Length Subnet Mask)은 하나의 네트워크를 여러 개의 서로 다른 크기의 Subnet으로 나누는 방법이다.
+
+기존 FLSM(Fixed Length Subnet Mask)은 모든 Subnet이 같은 크기를 사용하지만,
+
+VLSM은 필요한 Host 수에 따라 서로 다른 Subnet Mask를 사용하여 IP 주소를 효율적으로 관리한다.
+
+---
+
+# VLSM을 사용하는 이유
+
+예시
+
+하나의 네트워크
+
+```text
+192.168.10.0/24
+```
+
+필요한 네트워크
+
+| Network | 필요한 Host |
+| ------ | ------ |
+| A | 100 |
+| B | 50 |
+| C | 20 |
+
+---
+
+# FLSM 방식
+
+FLSM은 모든 네트워크를 동일한 크기로 나눈다.
+
+가장 많은 Host가 필요한 기준으로 계산
+
+```text
+100 Host 필요
+```
+
+계산
+
+```text
+2^7 - 2 = 126
+```
+
+따라서
+
+```text
+/25 사용
+```
+
+결과
+
+| Network | Subnet |
+| ------ | ------ |
+| A | 192.168.10.0/25 |
+| B | 192.168.10.128/25 |
+| C | 192.168.11.0/25 |
+
+문제점
+
+- 작은 네트워크도 큰 Subnet 사용
+- IP 주소 낭비 발생
+
+---
+
+# VLSM 방식
+
+필요한 Host 수에 맞춰 Subnet 크기를 다르게 할당한다.
+
+## 1. Host 수 정렬
+
+큰 네트워크부터 할당한다.
+
+```text
+A : 100 Host
+B : 50 Host
+C : 20 Host
+```
+
+---
+
+## 2. Subnet 계산
+
+
+## A Network
+
+필요 Host
+
+```text
+100 Host
+```
+
+계산
+
+```text
+2^7 - 2 = 126
+```
+
+Subnet
+
+```text
+/25
+```
+
+할당
+
+```text
+192.168.10.0/25
+```
+
+---
+
+## B Network
+
+필요 Host
+
+```text
+50 Host
+```
+
+계산
+
+```text
+2^6 - 2 = 62
+```
+
+Subnet
+
+```text
+/26
+```
+
+할당
+
+```text
+192.168.10.128/26
+```
+
+---
+
+## C Network
+
+필요 Host
+
+```text
+20 Host
+```
+
+계산
+
+```text
+2^5 - 2 = 30
+```
+
+Subnet
+
+```text
+/27
+```
+
+할당
+
+```text
+192.168.10.192/27
+```
+
+---
+
+# VLSM 결과
+
+기존 네트워크
+
+```text
+192.168.10.0/24
+```
+
+결과
+
+| Network | CIDR | Host 범위 | Broadcast |
+| ------ | ------ | ------ | ------ |
+| A | 192.168.10.0/25 | 192.168.10.1 ~ 126 | 192.168.10.127 |
+| B | 192.168.10.128/26 | 192.168.10.129 ~ 190 | 192.168.10.191 |
+| C | 192.168.10.192/27 | 192.168.10.193 ~ 222 | 192.168.10.223 |
+
+---
+
+# VLSM 계산 순서
+
+1. 필요한 Host 수 확인
+
+2. 가장 큰 Host부터 정렬
+
+3. Host Bit 계산
+
+공식
+
+```text
+2^(Host Bit) - 2 >= 필요한 Host 수
+```
+
+4. CIDR 결정
+
+5. 순서대로 Subnet 할당
+
+---
+
+# VLSM과 FLSM 비교
+
+| 구분 | FLSM | VLSM |
+| ------ | ------ | ------ |
+| Subnet 크기 | 동일 | 서로 다름 |
+| IP 효율 | 낮음 | 높음 |
+| 관리 난이도 | 쉬움 | 복잡 |
+| 사용 목적 | 단순 분할 | 효율적인 주소 관리 |
+
+---
+
+# 핵심 정리
 
 * Subnet Mask는 Network ID와 Host ID를 구분한다.
-* Network Bit는 1, Host Bit는 0으로 표현된다.
-* CIDR은 Network Bit 수를 나타낸다.
+* Network Bit는 1, Host Bit는 0으로 표현한다.
+* CIDR은 Network Bit 수를 의미한다.
 * Network Address는 Host Bit가 모두 0이다.
 * Broadcast Address는 Host Bit가 모두 1이다.
-* 사용 가능한 Host 수는 `2^(Host Bit) - 2` 공식으로 계산한다.
+* 사용 가능한 Host 수는 `2^(Host Bit)-2` 공식으로 계산한다.
+* VLSM은 필요한 Host 수에 맞춰 Subnet 크기를 다르게 할당하는 방법이다.
+* VLSM은 IP 주소 낭비를 줄이고 효율적인 주소 관리가 가능하다.
