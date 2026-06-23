@@ -31,7 +31,7 @@ STP는 다음과 같은 단계로 작동한다.
 - Disabled: 관리자에 의해 비활성화된 상태
 # 예시
 <p align="center">
-  <img src="./image/IMG_0015.PNG" width="550">
+  <img src="./Image/IMG_0015.PNG" width="550">
 </p>
 위 상태일때 스위치 A,B,C는 서로간의 BPDU를 주고받고 스위치 A가 루트브리지로 선정된다.
 
@@ -41,5 +41,5 @@ STP는 다음과 같은 단계로 작동한다.
 
 최종적으로는 이런 형태가 된다.
 <p align="center">
-  <img src="./image/IMG_0016.PNG" width="550">
+  <img src="./Image/IMG_0016.PNG" width="550">
 </p>
