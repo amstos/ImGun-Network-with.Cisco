@@ -186,14 +186,3 @@ Switch# show vlan brief
 | 보안성 | 보통 | 높음 |
 | 트래픽 효율 | 보통 | 높음 |
 | 네트워크 관리 | 단순 | 유연 |
-
----
-
-## 핵심 정리
-
-- VLAN은 하나의 스위치를 여러 개의 논리적 네트워크로 분리하는 기술이다.
-- VLAN은 Broadcast Domain을 분리한다.
-- 같은 VLAN끼리는 Layer 2 통신이 가능하다.
-- 서로 다른 VLAN은 기본적으로 통신할 수 없다.
-- 다른 VLAN 간 통신을 위해서는 Inter-VLAN Routing이 필요하다.
-- VLAN은 보안성과 관리 효율성을 향상시킨다.

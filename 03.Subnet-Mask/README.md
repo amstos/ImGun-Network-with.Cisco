@@ -413,16 +413,3 @@ Subnet
 | IP 효율 | 낮음 | 높음 |
 | 관리 난이도 | 쉬움 | 복잡 |
 | 사용 목적 | 단순 분할 | 효율적인 주소 관리 |
-
----
-
-# 핵심 정리
-
-* Subnet Mask는 Network ID와 Host ID를 구분한다.
-* Network Bit는 1, Host Bit는 0으로 표현한다.
-* CIDR은 Network Bit 수를 의미한다.
-* Network Address는 Host Bit가 모두 0이다.
-* Broadcast Address는 Host Bit가 모두 1이다.
-* 사용 가능한 Host 수는 `2^(Host Bit)-2` 공식으로 계산한다.
-* VLSM은 필요한 Host 수에 맞춰 Subnet 크기를 다르게 할당하는 방법이다.
-* VLSM은 IP 주소 낭비를 줄이고 효율적인 주소 관리가 가능하다.

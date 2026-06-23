@@ -162,7 +162,7 @@ Frame
 
 ---
 
-## 핵심 정리
+## 데이터 단위 정리
 
 * Layer 1 → Physical → Bit
 * Layer 2 → Data Link → Frame
