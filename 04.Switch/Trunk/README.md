@@ -1,4 +1,4 @@
-# 06. Trunk Port
+# Trunk Port
 
 ## 개요
 
