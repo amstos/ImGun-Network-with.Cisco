@@ -1,4 +1,4 @@
-# 05. VLAN (Virtual LAN)
+# VLAN (Virtual LAN)
 
 ## 개요
 VLAN(Virtual LAN)은 하나의 물리적인 스위치를 여러 개의 논리적인 네트워크로 분리하는 기술이다.
