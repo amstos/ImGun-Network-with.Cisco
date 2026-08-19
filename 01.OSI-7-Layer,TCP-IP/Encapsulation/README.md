@@ -5,7 +5,7 @@
 
 ## 예시
 <p align="center">
-  <img src="./Image/encapsulation_diagram.png" width="550">
+  <img src="./Image/encapsulation_diagram.png">
 </p>
 
 
