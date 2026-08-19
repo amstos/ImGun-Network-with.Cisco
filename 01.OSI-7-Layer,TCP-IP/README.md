@@ -1,4 +1,4 @@
-# 01. OSI 7 Layer & TCP/IP
+# Encapsulation / Decapsulation
 
 ## 개요
 
@@ -7,19 +7,31 @@ OSI 7 Layer는 네트워크 통신 과정을 7개의 계층으로 나누어 표�
 각 계층은 독립적인 역할을 수행하며, 상위 계층은 하위 계층의 서비스를 이용하여 데이터를 전송한다.
 
 ---
+flowchart TD
+    %% PC1 캡슐화 과정
+    subgraph PC1 [PC1: Encapsulation]
+        direction TB
+        App1[Application Layer] --> |Data| Pres1[Presentation Layer]
+        Pres1 --> |Data| Ses1[Session Layer]
+        Ses1 --> |Data| Trans1[Transport Layer]
+        Trans1 --> |Data + L4| Net1[Network Layer]
+        Net1 --> |Data + L4 + L3| DL1[Data-Link Layer]
+        DL1 --> |FCS + Data + L4 + L3 + L2| Phys1[Physical Layer]
+    end
 
-## OSI 7 Layer
+    %% 물리적 매체 (Physical Medium)
+    Phys1 ==> |"Physical Medium \n (Bits: 0101001110101011...)"| Phys2
 
-| Layer | Name         | Device     | PDU     |
-| ----- | ------------ | ---------- | ------- |
-| 7     | Application  | -          | Data    |
-| 6     | Presentation | -          | Data    |
-| 5     | Session      | -          | Data    |
-| 4     | Transport    | -          | Segment |
-| 3     | Network      | Router     | Packet  |
-| 2     | Data Link    | Switch     | Frame   |
-| 1     | Physical     | Hub, Cable | Bit     |
-
+    %% PC2 역캡슐화 과정
+    subgraph PC2 [PC2: Decapsulation]
+        direction BT
+        Phys2[Physical Layer] --> |FCS + Data + L4 + L3 + L2| DL2[Data-Link Layer]
+        DL2 --> |Data + L4 + L3| Net2[Network Layer]
+        Net2 --> |Data + L4| Trans2[Transport Layer]
+        Trans2 --> |Data| Ses2[Session Layer]
+        Ses2 --> |Data| Pres2[Presentation Layer]
+        Pres2 --> |Data| App2[Application Layer]
+    end
 ---
 
 ## Layer 7 - Application
