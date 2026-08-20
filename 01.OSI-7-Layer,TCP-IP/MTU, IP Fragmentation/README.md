@@ -50,7 +50,7 @@ L3 계층에서 4000바이트의 데이터를 L2 계층(MTU 1500바이트)을 �
 ## DF 플래그
 
 <p align="center">
-  <img src="./Image/.png">
+  <img src="./Image/DFflag.png">
 </p>
 
 
