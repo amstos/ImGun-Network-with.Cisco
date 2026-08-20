@@ -17,7 +17,7 @@ IP헤더와 상위데이터의 합산이며 L2이더넷 헤더는 포함되지 �
 ## 예시
 
 <p align="center">
-  <img src="./Image/ip_fragmentation.png">
+  <img src="./Image/ipfragmentation.png">
 </p>
 
 ## 송신 측의 IP Fragmentation 과정
