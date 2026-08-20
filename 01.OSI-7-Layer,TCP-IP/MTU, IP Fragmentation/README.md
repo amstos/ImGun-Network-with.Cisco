@@ -10,6 +10,11 @@ IP헤더와 상위데이터의 합산이며 L2이더넷 헤더는 포함되지 �
 
 # IP Fragmentation
 
+## 예시
+
+<p align="center">
+  <img src="./Image/ip_fragmentation.png">
+</p>
 
 ## 
 
