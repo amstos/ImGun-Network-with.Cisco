@@ -1,4 +1,4 @@
-# Public, Private IP / NAT
+# Public, Private IP
 
 ## 개요
 네트워크 상의 기기들을 식별하기 위해 부여되는 IP 주소는 용도와 접근성에 따라 **공인(Public)** 과 **사설(Private)** 로 구분된다.<br>
