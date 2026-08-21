@@ -30,6 +30,7 @@ IP 주소 공간 중에서 사설 IP 주소로 사용하도록 특별히 예약�
   <img src="./Image/NAT.png">
 </p>
 
+## 과정
 - **SNAT (Source NAT): 내부 ➡️ 외부 (인터넷 접속)**
   - 내부 기기가 인터넷으로 나갈 때, 패킷의 출발지(Source) 사설 IP를 라우터의 공인 IP로 변경합니다.
 - **DNAT (Destination NAT): 외부 ➡️ 내부 (포트 포워딩)**
