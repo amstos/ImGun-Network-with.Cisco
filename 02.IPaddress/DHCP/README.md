@@ -32,3 +32,6 @@
 
 # DHCP
 
+<p align="center">
+  <img src="./Image/dhcp.png">
+</p>
