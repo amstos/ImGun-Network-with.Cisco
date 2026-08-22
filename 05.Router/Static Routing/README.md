@@ -21,7 +21,9 @@ Router가 자동으로 경로를 학습하는 Dynamic Routing과 달리, 관리�
 ---
 
 ## 네트워크 구성 예시
-
+<p align="center">
+  <img src="./Image/static.png">
+</p>
 
 
 ---
