@@ -5,12 +5,12 @@
 ## [1.OSI 7Layer, TCP-TP](./1.OSI%207Layer,TCP-IP/)
 * ### [IPaddress](./1.OSI%207Layer,TCP-IP/IPaddress/)
 * ### [Subnet Mask](./1.OSI%207Layer,TCP-IP/Subnet%20Mask/)
-* ### [IPv4](./1.OSI%207Layer,TCP-IP/IPv4/)
-* ### [IPv6]
-* ### [ARP, ICMP]
 * ### [Encapsulation, PDU](./1.OSI%207Layer,TCP-IP/Encapsulation,%20PDU/)
-* ### [Public, Private IP, NAT](./1.OSI%207Layer,TCP-IP/Public,%20Private%20IP,%20NAT/)
+* ### [IPv4](./1.OSI%207Layer,TCP-IP/IPv4/)
+* ### [IPv6](./1.OSI%207Layer,TCP-IP/IPv6/)
+* ### [ARP, ICMP]
 * ### [Static, Dynamic IP, DHCP](./1.OSI%207Layer,TCP-IP/Static,%20Dynamic%20IP,%20DHCP/)
+* ### [Public, Private IP, NAT](./1.OSI%207Layer,TCP-IP/Public,%20Private%20IP,%20NAT/)
 * ### [MTU, IP Fragmentation](./1.OSI%207Layer,TCP-IP/MTU,%20IP%20Fragmentation/)
 
 
