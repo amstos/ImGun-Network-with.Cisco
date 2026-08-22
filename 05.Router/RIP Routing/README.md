@@ -8,6 +8,8 @@ Distance Vector 방식의 Routing Protocol이며, 목적지까지의 **Hop Count
 
 RIP는 최대 15 Hop까지 지원하며, 16 Hop은 목적지에 도달할 수 없는 것으로 판단한다.
 
+RIP의 디폴트 라우팅 업데이트 주기는 30초 이다.
+
 ---
 
 ## RIP란?
@@ -29,27 +31,17 @@ RIP는 주변 Router에게 자신이 알고 있는 네트워크 정보를 주기
 
 예를 들어 다음과 같은 네트워크가 있다고 가정한다.
 
-```text
-192.168.10.0/24
-      |
-   Router A
-      |
-   10.0.0.0/30
-      |
-   Router B
-      |
-192.168.20.0/24
-```
+<p align="center">
+  <img src="./Image/rip.png">
+</p>
 
 Router A는 자신의 Routing 정보를 Router B에게 전달하고, Router B 역시 자신의 Routing 정보를 Router A에게 전달한다.
 
 결과적으로 Router A는 다음과 같은 경로를 학습할 수 있다.
 
 ```text
-192.168.20.0/24
-      ↓
-Next Hop: 10.0.0.2
-Metric: 1 Hop
+R 192.168.20.0/24 [120/1] via 10.0.0.2
+이때 via 10.0.0.2가 바로 Next Hop이다
 ```
 
 ---
