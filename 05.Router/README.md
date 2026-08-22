@@ -102,7 +102,7 @@ PC가 `192.168.10.0/24`가 아닌 다른 네트워크로 통신할 경우 Packet
 예를 들어 다음과 같은 네트워크가 있다고 가정한다.
 
 <p align="center">
-  <img src="./Image/router1.png">
+  <img src="./Image/router.png">
 </p>
 
 
