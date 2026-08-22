@@ -25,6 +25,14 @@ OSPF는 대규모 네트워크에서도 사용할 수 있으며, RIP보다 빠�
 
 ## OSPF 패킷
 
+<p align="center">
+  <img src="./Image/ospf_packet.png">
+</p>
+
+```text
+OSPF는 IP 패킷 안에 프로토콜 넘버 89(십진수)로 들어가게 된다.
+즉 IP패킷만 봐도 OSPF정보임을 알 수 있다.
+```
 
 ---
 
