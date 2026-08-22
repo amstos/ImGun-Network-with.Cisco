@@ -17,7 +17,7 @@
 * ### [1.STP](./2.Switch/1.STP/)
 * ### [2.Trunk](./2.Switch/2.Trunk/)
 * ### [3.VLAN](./2.Switch/3.VLAN/)
-* ### [4.EtherChannel]
+* ### [4.L2 EtherChannel]
 * ### [5.LACP]
 
 
