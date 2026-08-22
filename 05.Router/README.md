@@ -124,10 +124,6 @@ Routing Table을 기반으로 목적지까지의 경로를 결정한다.
 
 서로 다른 VLAN 간의 통신을 가능하게 한다.
 
-<p align="center">
-  <img src="./Image/router_subinterface.png">
-</p>
-
 ### NAT
 
 Private IP Address를 Public IP Address로 변환하여 내부 네트워크의 장치가 인터넷과 통신할 수 있도록 한다.
