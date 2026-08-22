@@ -175,21 +175,6 @@ Cisco IOS에서는 기본 Reference Bandwidth가 100 Mbps로 설정되어 있다
 
 ---
 
-## OSPF와 RIP의 차이
-
-| 구분         | RIP             | OSPF       |
-| ---------- | --------------- | ---------- |
-| Routing 방식 | Distance Vector | Link-State |
-| Metric     | Hop Count       | Cost       |
-| 최대 Hop     | 15 Hop          | 제한 없음      |
-| 알고리즘       | Bellman-Ford 계열 | SPF        |
-| Area       | 지원하지 않음         | 지원         |
-| 수렴 속도      | 느림              | 빠름         |
-| 확장성        | 낮음              | 높음         |
-| 적합한 환경     | 소규모             | 중·대규모      |
-
----
-
 ## OSPF 설정
 
 Cisco IOS에서는 다음 명령어를 사용하여 OSPF를 설정한다.
