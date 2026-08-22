@@ -52,20 +52,9 @@ RIP는 목적지까지 거쳐가는 Router의 개수를 **Hop Count**로 계산�
 
 예시
 
-```text
-Router A
-   |
-   | 1 Hop
-   |
-Router B
-   |
-   | 2 Hop
-   |
-Router C
-   |
-   |
-Network C
-```
+<p align="center">
+  <img src="./Image/rip_hop.png">
+</p>
 
 Router A에서 Network C까지의 경로는 2개의 Router를 거치므로 RIP Metric은 2 Hop이 된다.
 
