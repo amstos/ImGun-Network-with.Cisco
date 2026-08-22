@@ -75,12 +75,12 @@ RIP에서 사용하는 Metric은 **Hop Count**이다.
 RIP는 경로 A를 선택한다.
 
 ```text
-1 Hop < 2 Hop
+2 Hop < 4 Hop
 ```
 
 단, Hop Count가 낮다고 해서 실제 네트워크 성능이 더 좋은 것은 아니다.
 
-RIP는 Bandwidth, Delay, Load 등의 요소를 고려하지 않고 Hop Count만을 기준으로 경로를 선택한다.
+위 예시를 보면 라우터 A->B->C는 28.8Kbps인 반면 라우터 A->D->E->F->C는 1,544Mbps이다 경로A 보다 경로B가 더 빠른데도 불구하고 RIP는 Hop Count에만 의존하기 때문에 회선의 신뢰도, 회선의 로드등을 확인하지 않는다.
 
 ---
 
