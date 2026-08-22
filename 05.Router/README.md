@@ -85,21 +85,9 @@ Routing Table을 기반으로 Packet을 전달할 다음 홉과 출력 Interface
 예를 들어 다음과 같은 네트워크가 있다고 가정한다.
 
 ```text
-PC-A
-192.168.10.10
-     |
-     | 192.168.10.0/24
-     |
-   Switch
-     |
-   Router
-     |
-     | 192.168.20.0/24
-     |
-   Switch
-     |
-PC-B
-192.168.20.10
+<p align="center">
+  <img src="./Image/router1.png">
+</p>
 ```
 
 PC-A가 PC-B와 통신할 경우 서로 다른 네트워크에 있기 때문에 Router가 필요하다.
