@@ -21,10 +21,10 @@ Router가 자동으로 경로를 학습하는 Dynamic Routing과 달리, 관리�
 ---
 
 ## 네트워크 구성 예시
+
 <p align="center">
   <img src="./Image/static.png">
 </p>
-
 
 ---
 
@@ -103,7 +103,7 @@ Router A의 인터페이스 설정
 
 ```text
 RouterA(config)# interface gigabitEthernet 0/0
-RouterA(config-if)# ip address 192.168.10.1 255.255.255.0
+RouterA(config-if)# ip address 192.168.10.254 255.255.255.0
 RouterA(config-if)# no shutdown
 
 RouterA(config)# interface gigabitEthernet 0/1
@@ -129,7 +129,7 @@ RouterB(config-if)# ip address 10.0.0.2 255.255.255.252
 RouterB(config-if)# no shutdown
 
 RouterB(config)# interface gigabitEthernet 0/1
-RouterB(config-if)# ip address 192.168.20.1 255.255.255.0
+RouterB(config-if)# ip address 192.168.20.254 255.255.255.0
 RouterB(config-if)# no shutdown
 ```
 
