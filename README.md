@@ -10,14 +10,14 @@
 * ### [MTU. IP Fragmentation](./1.OSI%207Layer,TCP-IP/MTU,%20IP%20Fragmentation/)
 
 
-## 2.스위치
-* ### [STP]
-* ### [Trunk]
-* ### [VLAN]
+## [2.스위치](./2.Switch/)
+* ### [STP](./2.Switch/STP/)
+* ### [Trunk](./2.Switch/Trunk/)
+* ### [VLAN](./2.Switch/VLAN/)
 
 
-## 3.라우터
-* ### [Vlan(Router-on-a-Stick) Routing]
-* ### [Static Routing]
-* ### [OSPF Routing]
-* ### [RIP Rouring]
+## [3.라우터](./3.Router/)
+* ### [Vlan(Router-on-a-Stick) Routing](./3.Router/Vlan%20Routing/)
+* ### [Static Routing](./3.Router/Static%20Routing/)
+* ### [OSPF Routing](./3.Router/OSPF%20Routing/)
+* ### [RIP Rouring](./3.Router/RIP%20Routing/)
