@@ -5,6 +5,10 @@
   <img src="./Image/IPv4.png">
 </p>
 
+<p align="center">
+  <img src="./Image/ipv4_header.png">
+</p>
+
 ## IPv4 헤더의 주요 정보
 
 1. **버전 (Version)**: 현재 사용 중인 IP 프로토콜의 버전입니다. IPv4이므로 숫자 '4'가 들어간다.
@@ -23,9 +27,3 @@
 
 ---
 
-## ARP
-
-IP 주소를 통해 MAC주소를 알아내는 프로토콜이다.<BR>
-동일 네트워크내에 있는 송수신 대상의 IP 주소를 알아낼 수 있다.<BR>
-
----
