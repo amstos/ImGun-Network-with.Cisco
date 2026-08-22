@@ -8,8 +8,6 @@ Distance Vector 방식의 Routing Protocol이며, 목적지까지의 **Hop Count
 
 RIP는 최대 15 Hop까지 지원하며, 16 Hop은 목적지에 도달할 수 없는 것으로 판단한다.
 
-RIPv2 기준으로 설명한다.
-
 ---
 
 ## RIP란?
