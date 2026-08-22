@@ -32,4 +32,4 @@
 
 ## [4.Packet Tracer](./4.Packet%20Tracer/)
 
-## [5.Trouble Shooting]
+## [5.Trouble Shooting](./5.Trouble%20Shooting/)
