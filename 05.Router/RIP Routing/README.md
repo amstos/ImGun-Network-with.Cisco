@@ -68,18 +68,9 @@ RIP에서 사용하는 Metric은 **Hop Count**이다.
 
 예시
 
-```text
-경로 A
-
-Router A → Router B → Network
-             1 Hop
-
-
-경로 B
-
-Router A → Router C → Router D → Network
-             2 Hop
-```
+<p align="center">
+  <img src="./Image/rip_metric.png">
+</p>
 
 RIP는 경로 A를 선택한다.
 
