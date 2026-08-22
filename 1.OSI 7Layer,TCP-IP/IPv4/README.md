@@ -1,9 +1,6 @@
 #  IPv4
 
 ## IPv4 패킷 헤더
-<p align="center">
-  <img src="./Image/IPv4.png">
-</p>
 
 <p align="center">
   <img src="./Image/ipv4_header.png">
