@@ -1,4 +1,4 @@
-# 03. Subnet Mask
+# Subnet Mask
 
 ## 개요
 

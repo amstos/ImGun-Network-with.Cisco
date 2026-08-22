@@ -1,4 +1,4 @@
-# 02. IP Address
+# IP Address
 
 ## 개요
 
