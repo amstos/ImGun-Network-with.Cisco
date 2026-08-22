@@ -79,37 +79,6 @@ Routing Table을 기반으로 Packet을 전달할 다음 홉과 출력 Interface
 | 주요 장비 역할         | LAN 연결            | 네트워크 간 연결     |
 
 ---
-
-## Router와 Switch의 통신 과정
-
-예를 들어 다음과 같은 네트워크가 있다고 가정한다.
-
-```text
-<p align="center">
-  <img src="./Image/router1.png">
-</p>
-```
-
-PC-A가 PC-B와 통신할 경우 서로 다른 네트워크에 있기 때문에 Router가 필요하다.
-
-```text
-PC-A
-  ↓
-Switch
-  ↓
-Router
-  ↓
-Switch
-  ↓
-PC-B
-```
-
-PC-A는 목적지 IP가 자신의 네트워크인 `192.168.10.0/24`에 없다는 것을 확인하고 Default Gateway인 Router로 Packet을 전달한다.
-
-Router는 목적지 IP `192.168.20.10`을 확인하고 Routing Table을 통해 `192.168.20.0/24` 네트워크로 전달한다.
-
----
-
 ## Default Gateway
 
 Default Gateway는 자신의 네트워크가 아닌 다른 네트워크로 통신할 때 사용하는 Router의 주소이다.
@@ -127,6 +96,24 @@ PC가 `192.168.10.0/24`가 아닌 다른 네트워크로 통신할 경우 Packet
 
 ---
 
+
+## Router와 Switch의 통신 과정
+
+예를 들어 다음과 같은 네트워크가 있다고 가정한다.
+
+<p align="center">
+  <img src="./Image/router1.png">
+</p>
+
+
+PC A가 PC B와 통신할 경우 서로 다른 네트워크에 있기 때문에 Router가 필요하다.
+
+PC A는 목적지 IP가 자신의 네트워크인 `192.168.10.0/24`에 없다는 것을 확인하고 Default Gateway인 Router로 Packet을 전달한다.
+
+Router는 목적지 IP `192.168.20.10`을 확인하고 Routing Table을 통해 `192.168.20.0/24` 네트워크로 전달한다.
+
+---
+
 ## Router의 주요 기능
 
 ### Routing
@@ -137,15 +124,9 @@ Routing Table을 기반으로 목적지까지의 경로를 결정한다.
 
 서로 다른 VLAN 간의 통신을 가능하게 한다.
 
-```text
-VLAN 10
-192.168.10.0/24
-       |
-     Router
-       |
-VLAN 20
-192.168.20.0/24
-```
+<p align="center">
+  <img src="./Image/router_subinterface.png">
+</p>
 
 ### NAT
 
