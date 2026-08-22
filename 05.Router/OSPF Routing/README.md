@@ -23,6 +23,11 @@ OSPF는 대규모 네트워크에서도 사용할 수 있으며, RIP보다 빠�
 
 ---
 
+## OSPF 패킷
+
+
+---
+
 ## OSPF 동작 방식
 
 OSPF Router는 주변 Router와 **Hello Packet**을 교환하여 Neighbor 관계를 형성한다.
