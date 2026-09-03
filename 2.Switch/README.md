@@ -1,4 +1,4 @@
-# 04. Switch
+# Switch
 
 ## 개요
 
