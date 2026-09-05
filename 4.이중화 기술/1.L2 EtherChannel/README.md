@@ -94,6 +94,19 @@ Switch# show etherchannel summary
 
 ```
 
+### EtherChannel 삭제 명령어
+
+포트의 채널 그룹 삭제
+```bash
+Switch(config)# interface range f0/1 - 2
+Switch(config)# no channel-group 1
+```
+
+포트채널 인터페이스 자체 삭제
+```bash
+Switch(config)# no interface port-channel 1
+```
+
 - **(I) 상태**: 구성 오류 발생 (Configuration Issue)
 - **(D) 상태**: 비활성화된 상태 (Down)
 
