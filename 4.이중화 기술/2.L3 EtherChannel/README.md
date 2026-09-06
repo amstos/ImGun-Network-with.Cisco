@@ -36,7 +36,7 @@ Switch(config)# interface range f0/23 - 24
 Switch(config-if-range)# channel-protocol pagp  #Static, LACP 사용 가능
 Switch(config-if-range)# channel-group 1 mode desi
 Switch(config-if-range)# switchport trunk encapsulation dot1q #Trunk를 사용할 경우 VLAN 태깅 방식은 802.1Q를 사용 기본은 auto
-Switch(config-if-range)# switchport mode trunk #태깅 방식이 auto일 경우 trunk 사용 불가
+Switch(config-if-range)# switchport mode trunk 
 ```
 ### L3스위치 VLAN간 라우팅
 ```bash
