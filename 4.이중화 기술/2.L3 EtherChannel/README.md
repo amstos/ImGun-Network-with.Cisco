@@ -22,6 +22,7 @@ EtherChannel은 L2와 L3 두 가지 방식으로 구현할 수 있다.
 - **STP 영향을 받지 않음** (L3에서 동작하기 때문)
 
 ## Router
+null
 
 ## L3 Switch
 L3 스위치는 일반적인 라우터와 다르게 설정해야 한다.<BR>
@@ -29,7 +30,23 @@ Cisco의 일반적인 라우터 EtherChannel 구현에서는 Port-channel을 VLA
 
 ### 이더채널 구성 예시
 ```bash
+-- L3SW --
 Switch(config)# interface range f0/23 - 24
-Switch(config-if-range)# channel-protocol pagp () 
-
+Switch(config-if-range)# channel-protocol pagp  #Static, LACP 사용 가능
+Switch(config-if-range)# channel-group 1 mode desi
+Switch(config-if-range)# switchport trunk encapsulation dot1q #Trunk를 사용할 경우 VLAN 태깅 방식은 802.1Q를 사용 기본은 auto
+Switch(config-if-range)# switchport mode trunk #태깅 방v식이 auto일 경우 trunk 사용 불가
 ```
+### L3스위치 VLAN간 라우팅
+```bash
+-- L3SW --
+Switch(config)# vlan 10
+Switch(config)# interface vlan 10
+Switch(config-if)# ip address [vlan 10 gateway] [subnet-mask]
+Switch(config)# vlan 20
+Switch(config)# interface vlan 20
+Switch(config-if)# ip address [vlan 20 gateway] [subnet-mask]
+Switch(config)# ip routing
+```
+
+---
