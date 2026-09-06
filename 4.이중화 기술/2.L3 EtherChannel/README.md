@@ -26,7 +26,8 @@ null
 
 ## L3 Switch
 L3 스위치는 일반적인 라우터와 다르게 설정해야 한다.<BR>
-Cisco의 일반적인 라우터 EtherChannel 구현에서는 Port-channel을 VLAN trunk처럼 사용하고 그 위에 여러 VLAN 서브인터페이스를 구성하는 방식이 지원되지 않는 경우가 많기에 L3 스위치를 이용한 이중화 방식이 추천된다.
+Cisco 라우터의 EtherChannel은 Port-channel을 VLAN trunk처럼 사용하고 그 위에 여러 VLAN 서브인터페이스를 구성하는 방식이 지원하지 않는다.<br>
+따라서 L3스위치로 이중화방식이 추천된다.
 
 ### 이더채널 구성 예시
 ```bash
